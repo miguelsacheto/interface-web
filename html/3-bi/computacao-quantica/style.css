@@ -1,0 +1,24 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  background-color: #0d2149;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito simples ao passar o mouse no card */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Espaço extra para os títulos dentro dos cards */
+.card-title {
+  font-size: 1.1rem;
+}
