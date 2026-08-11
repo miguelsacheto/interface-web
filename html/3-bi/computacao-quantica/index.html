@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computação Quântica</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#inicio"> Computação Quântica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#inicio">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#qubit">O que é um qubit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fenomenos">Fenômenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aplicacoes">Aplicações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#linha-do-tempo">Linha do tempo</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero text-center text-white">
+    <div class="container py-5">
+      <h1 class="display-4">Computação Quântica</h1>
+      <p class="lead">
+        Um computador normal usa bits, que valem 0 ou 1. Um computador quântico usa
+        qubits, que conseguem representar 0 e 1 ao mesmo tempo.
+      </p>
+      <a href="#qubit" class="btn btn-primary btn-lg mt-3">Saiba mais</a>
+    </div>
+  </header>
+
+  <section id="qubit" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Bit x Qubit</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <span class="badge bg-secondary">Clássico</span>
+              <h3 class="card-title mt-2">Bit</h3>
+              <p class="card-text">
+                Um bit é como um interruptor de luz: só pode estar ligado (1) ou
+                desligado (0), nunca os dois ao mesmo tempo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 border-primary">
+            <div class="card-body position-relative">
+              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">novo</span>
+              <span class="badge bg-primary">Quântico</span>
+              <h3 class="card-title mt-2">Qubit</h3>
+              <p class="card-text">
+                Um qubit pode representar 0 e 1 ao mesmo tempo. Esse fenômeno é
+                chamado de <strong>superposição</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fenomenos" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Fenômenos da física quântica</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Superposição</h3>
+              <p class="card-text">
+                O qubit pode estar em mais de um estado ao mesmo tempo, até ser medido.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Entrelaçamento</h3>
+              <p class="card-text">
+                Dois qubits entrelaçados ficam conectados, mesmo estando distantes
+                um do outro.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Interferência</h3>
+              <p class="card-text">
+                As probabilidades podem se somar ou se cancelar, parecido com ondas
+                na água.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aplicacoes" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Aplicações</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Criptografia</h3>
+              <p class="card-text">Criar formas mais seguras de proteger dados no futuro.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Medicina</h3>
+              <p class="card-text">Ajudar a descobrir novos remédios simulando moléculas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Logística</h3>
+              <p class="card-text">Encontrar as melhores rotas entre milhares de opções.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Materiais</h3>
+              <p class="card-text">Projetar baterias e materiais melhores.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Inteligência artificial</h3>
+              <p class="card-text">Treinar modelos de aprendizado de máquina mais rápido.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title"> Finanças</h3>
+              <p class="card-text">Calcular riscos e investimentos de forma mais precisa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="linha-do-tempo" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Linha do tempo</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="badge bg-primary me-2">1981</span>
+          Richard Feynman propõe a ideia de usar a física quântica para fazer cálculos.
+        </li>
+        <li class="list-group-item">
+          <span class="badge bg-primary me-2">1994</span>
+          Peter Shor cria um algoritmo quântico famoso para fatorar números grandes.
+        </li>
+        <li class="list-group-item">
+          <span class="badge bg-primary me-2">2019</span>
+          O Google anuncia ter atingido a chamada "supremacia quântica".
+        </li>
+        <li class="list-group-item">
+          <span class="badge bg-secondary me-2">Hoje</span>
+          Empresas continuam melhorando os computadores quânticos.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">Site sobre Computação Quântica feito por Miguel Silva Sacheto e Noah calixto moi</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+</html>
