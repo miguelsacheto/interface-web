@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Computação Quântica</title>
+
+    <!-- CSS do Bootstrap, carregado via CDN (jsDelivr). Precisa vir ANTES do style.css,
+         senão suas regras customizadas (ex: .hero) podem ser sobrescritas pelo Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Meu CSS customizado (classes .hero, .card, .card:hover, .card-title etc.) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg  hero">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Empresas</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarText">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html ">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                    </ul>
+
+                    <span class="navbar-text">
+                        empresas e computadores quânticos
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <h1 class="text-center text-primary">Principais empresas fabricantes de computadores quânticos </h1>
+
+    <hr class="my-5">
+    <br>
+
+    <!-- Imagem ilustrativa: um wafer real de qubits de um computador quântico D-Wave, logo na abertura da página -->
+    <figure class="text-center mb-4">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Wafer_of_the_Latest_D-Wave_Quantum_Computers_(39188583425).jpg"
+            alt="Wafer com chips quânticos da D-Wave" class="img-fluid rounded shadow-sm" style="max-width: 480px;">
+        <figcaption class="text-muted small mt-2">Wafer com chips de qubits de um computador quântico D-Wave </figcaption>
+    </figure>
+
+    <h3 class="mt-4 mb-3 text-center text-primary">Gigantes de tecnologia</h3>
+    <div class="accordion w-75 mx-auto" id="gigantesAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+                    IBM
+                </button>
+            </h2>
+            <div id="item1" class="accordion-collapse collapse " data-bs-parent="#gigantesAccordion">
+                <div class="accordion-body">
+                    Pioneira, mantém a IBM Quantum Network (mais de 200 instituições) e a plataforma em nuvem IBM
+                    Quantum. Aposta em qubits supercondutores e tem um roteiro público até a computação tolerante a
+                    falhas por volta de 2029.
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 2: mesmo padrão do item 1, mas com "collapsed" no botão (começa fechado, sem "show" no corpo) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item2">
+                    Google (Quantum AI)
+                </button>
+            </h2>
+            <div id="item2" class="accordion-collapse collapse" data-bs-parent="#gigantesAccordion">
+                <div class="accordion-body">
+                    Famosa pelo anúncio de "supremacia quântica" (2019) e pelos chips Sycamore e Willow; forte foco em
+                    pesquisa de correção de erros.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item3">
+                    Microsoft
+                </button>
+            </h2>
+            <div id="item3" class="accordion-collapse collapse" data-bs-parent="#gigantesAccordion">
+                <div class="accordion-body">
+                    Investe em qubits topológicos (chip Majorana 1) e opera o Azure Quantum, um marketplace que dá
+                    acesso a hardware de parceiros (IonQ, Quantinuum, Pasqal, Rigetti).
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item4">
+                    Amazon
+                </button>
+            </h2>
+            <div id="item4" class="accordion-collapse collapse" data-bs-parent="#gigantesAccordion">
+                <div class="accordion-body">
+                    Não fabrica hardware próprio, mas opera o Amazon Braket, serviço em nuvem que agrega hardware de
+                    D-Wave, IonQ, Rigetti e outros.
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 5: último item deste grupo -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item5">
+                    NVIDIA
+                </button>
+            </h2>
+            <div id="item5" class="accordion-collapse collapse" data-bs-parent="#gigantesAccordion">
+                <div class="accordion-body">
+                    Não constrói qubits, mas se posicionou como "camada de integração" entre GPUs clássicas e QPUs via
+                    a plataforma CUDA-Q, além de investir pesadamente em startups como Quantinuum, PsiQuantum e QuEra.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h3 class="mt-5 mb-3 text-center text-primary">Startups e empresas especializadas (pure-plays)</h3>
+
+    <!-- Imagem ilustrativa: aprisionamento de íons, técnica usada por várias das startups listadas abaixo -->
+    <figure class="text-center mb-4">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Quantum_Computing;_Ion_Trapping_(5941055642).jpg"
+            alt="Equipamento de aprisionamento de íons usado em computação quântica" class="img-fluid rounded shadow-sm"
+            style="max-width: 480px;">
+        <figcaption class="text-muted small mt-2">Aprisionamento de íons, a tecnologia por trás de startups como
+            IonQ e Quantinuum </figcaption>
+    </figure>
+
+    <div class="accordion w-75 mx-auto" id="startupsAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item6">
+                    IonQ
+                </button>
+            </h2>
+            <div id="item6" class="accordion-collapse collapse " data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    EUA, capital aberto — íons aprisionados; primeira do setor a superar US$ 100 milhões em receita
+                    anual; adquiriu a Oxford Ionics.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item7">
+                    Quantinuum
+                </button>
+            </h2>
+            <div id="item7" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    EUA/Reino Unido — fusão da Honeywell Quantum Solutions com a Cambridge Quantum (2021); detém
+                    recordes de qubits lógicos verificados (chip Helios).
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item8">
+                    Rigetti Computing
+                </button>
+            </h2>
+            <div id="item8" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    EUA, capital aberto — qubits supercondutores, opera o processador multi-chip Cepheus-1.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item9">
+                    D-Wave Quantum Inc.
+                </button>
+            </h2>
+            <div id="item9" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    EUA/Canadá, capital aberto — pioneira em computação por recozimento quântico; primeira a vender um
+                    computador quântico comercialmente (para a Lockheed Martin, em 2011); é hoje a mais madura em
+                    número de implantações comerciais reais.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item10">
+                    PsiQuantum
+                </button>
+            </h2>
+            <div id="item10" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    EUA — aposta em qubits fotônicos fabricados em parceria com a GlobalFoundries, visando um
+                    processador de escala de milhão de qubits.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item11">
+                    QuEra Computing e Pasqal
+                </button>
+            </h2>
+            <div id="item11" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    Átomos neutros manipulados por pinças ópticas.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item12">
+                    Atom Computing
+                </button>
+            </h2>
+            <div id="item12" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    Também de átomos neutros, processadores com mais de mil qubits.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item13">
+                    Xanadu
+                </button>
+            </h2>
+            <div id="item13" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    Canadá — fotônica, com o processador Borealis.
+                </div>
+            </div>
+        </div>
+
+        <!-- Item 14: último item deste grupo -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item14">
+                    Alice & Bob
+                </button>
+            </h2>
+            <div id="item14" class="accordion-collapse collapse" data-bs-parent="#startupsAccordion">
+                <div class="accordion-body">
+                    França — qubits "gatos" (cat qubits), buscando correção de erro nativa em hardware.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h3 class="text-center text-primary"> Empresas que usam (não fabricam) computação quântica — por setor </h3>
+    <br>
+
+    <!-- Imagem ilustrativa: um sistema de distribuição de chaves quânticas, ligado ao setor de segurança/telecom da tabela -->
+    <figure class="text-center mb-4">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/New_Quantum_Key_System_Combines_Speed,_Distance_(5884514248).jpg"
+            alt="Sistema de distribuição de chaves quânticas" class="img-fluid rounded shadow-sm"
+            style="max-width: 480px;">
+        <figcaption class="text-muted small mt-2">Sistema de distribuição de chaves quânticas, aplicação usada por
+            empresas do setor de segurança e telecom </figcaption>
+    </figure>
+
+    <!-- Tabela com os 8 setores que usam computação quântica, 3 colunas x 3 linhas (antes eram 3 divs "row" com .col) -->
+    <div class="container">
+        <table class="table table-bordered align-middle text-center">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Farmacêutico</strong><br>
+                        Boehringer Ingelheim, Pfizer, Merck (com IBM), Cleveland Clinic<br>
+                        Simulação de moléculas e proteínas para acelerar descoberta de fármacos; a Cleveland Clinic já
+                        simulou uma proteína de 303 átomos, inviável em computadores clássicos atuais.
+                    </td>
+                    <td>
+                        <strong>Financeiro</strong><br>
+                        JPMorgan Chase, Barclays, Goldman Sachs<br>
+                        Otimização de portfólio, precificação de derivativos, gestão de risco e detecção de fraude. O
+                        JPMorgan criou um fundo estratégico de US$ 10 bilhões que prioriza tecnologia quântica.
+                    </td>
+                    <td>
+                        <strong>Aeroespacial/defesa</strong><br>
+                        Airbus, Lockheed Martin (cliente pioneira da D-Wave em 2011)<br>
+                        Simulações aerodinâmicas, otimização estrutural, dinâmica de fluidos computacional.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Automotivo</strong><br>
+                        Volkswagen, Mercedes-Benz, Daimler<br>
+                        Otimização de rotas de tráfego, simulação de baterias para veículos elétricos, ciência de
+                        novos materiais.
+                    </td>
+                    <td>
+                        <strong>Logística/entregas</strong><br>
+                        DHL<br>
+                        Otimização de rotas de entrega (redução de custo estimada em até 20%).
+                    </td>
+                    <td>
+                        <strong>Químico/energia</strong><br>
+                        BASF, ExxonMobil<br>
+                        Modelagem de reações químicas, catalisadores, captura de carbono e fertilizantes mais
+                        eficientes.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Segurança/telecom</strong><br>
+                        Toshiba, ID Quantique<br>
+                        Criptografia quântica e comunicações seguras (ex.: rede quântica de Genebra, com CERN e
+                        Rolex).
+                    </td>
+                    <td>
+                        <strong>Clima/meteorologia</strong><br>
+                        Microsoft<br>
+                        Modelos climáticos e previsões meteorológicas de longo prazo.
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <div class="d-flex justify-content-center">
+        <div class="card " style="width: 32rem;">
+            <div class="card-body center ">
+                <h5 class="card-title">Obs.</h5>
+                <p class="card-text">Governos também entraram fortemente no jogo: em 2026, o Departamento de Comércio
+                    dos
+                    EUA distribuiu centenas de milhões de dólares entre IBM, D-Wave, Rigetti, PsiQuantum, Quantinuum,
+                    Atom
+                    Computing e outras, tratando a computação quântica como infraestrutura estratégica nacional. A
+                    China,
+                    via o Jiuzhang e outros programas estatais, também é protagonista da corrida..</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-sm "> <strong>Estado da arte em 2026</strong> <br>
+        IBM segue seu roteiro público rumo à "vantagem quântica" até o fim de 2026 e à computação tolerante a falhas até
+        2029, com os chips Nighthawk (120 qubits, maior conectividade) e Loon (demonstração de todos os elementos de
+        hardware necessários à tolerância a falhas).
+        Google anunciou o algoritmo "Quantum Echoes", com vantagem quântica verificável — 13.000 vezes mais rápido que o
+        melhor supercomputador clássico numa tarefa específica de correlação temporal fora de ordem — rodando no chip
+        Willow.
+        Microsoft avança (ainda de forma controversa entre cientistas) com qubits topológicos baseados em modos de
+        Majorana, prometendo, se validados, uma via de tolerância a falhas com muito menos qubits físicos por qubit
+        lógico.
+        Quantinuum detém o recorde de qubits lógicos verificados (48, com 98 qubits físicos) em seu processador Helios.
+        Investimento global no setor: cerca de US$ 17,3 bilhões em 2026, ante US$ 2,1 bilhões em 2022 — crescimento
+        expressivo puxado por venture capital, IPOs e investimentos governamentais.</div>
+    <br>
+    <hr class="my-5">
+    <div class="container-md"><strong>Desafios e limitações</strong>
+        <strong>decoerência e taxa de erro</strong>: qubits são extremamente sensíveis a ruído; manter a coerência por
+        tempo suficiente
+        para cálculos úteis continua sendo o maior obstáculo técnico. <br>
+        <strong> Correção de erros quânticos</strong>: exige múltiplos qubits físicos para codificar um único "qubit
+        lógico" confiável — o
+        que aumenta muito o número de qubits físicos necessários para aplicações reais. <br>
+        <strong>Custo e infraestrutura</strong>: sistemas supercondutores exigem criogenia próxima do zero absoluto;
+        construir e manter
+        um computador quântico custa dezenas de milhões de dólares.<br>
+        <strong> Falta de "killer app" madura</strong>: ainda não há uma aplicação comercial em escala que só a
+        computação quântica
+        resolva de forma decisiva melhor que métodos clássicos (incluindo métodos "quantum-inspired" rodando em GPUs).
+        Escassez de talentos: formação em algoritmos e engenharia quântica ainda é escassa no mercado.<br>
+        <strong> Risco criptográfico ("Q-Day")</strong>: computadores quânticos suficientemente potentes poderiam
+        quebrar esquemas de
+        criptografia assimétrica hoje usados (RSA, ECC) via o algoritmo de Shor — motivando a migração global para
+        criptografia pós-quântica, já uma prioridade para governos e empresas.
+    </div>
+    <br>
+
+    <div class="container-md "><strong>O futuro: rumo à tolerância a falhas</strong> <br>
+        O consenso entre os grandes players é que a indústria está migrando de dispositivos NISQ ("Noisy
+        Intermediate-Scale Quantum" — quânticos ruidosos de escala intermediária) para sistemas com correção de erro
+        robusta e, eventualmente, tolerância total a falhas. Os roteiros públicos apontam para:<br>
+        <br>
+        <strong>2024-2026</strong>: computação quântica "utility-scale" — já útil para problemas de nicho, ainda sem correção de erro
+        completa.<br>
+        <strong>2026-2029</strong>: sistemas com correção de erro em produção e primeiros ganhos de "vantagem quântica" comprovada em
+        problemas strongreais.<br>
+        <strong>2030 em diante</strong>: computação quântica tolerante a falhas em larga escala, com centenas de milhares a milhões de
+        qubits físicos, integrada de forma híbrida à computação clássica e de IA (supercomputação quântica-centrada).
+    </div>
+
+    <br>
+    <br>
+    <!-- Footer do Bootstrap: reaproveita a classe "hero" pra manter a mesma cor de fundo da navbar, igual ao index.html -->
+    <footer class="hero text-center text-white py-4">
+        <div class="container">
+            <p class="mb-1">Miguel Silva Sacheto e Noah Calixto Moi</p>
+            <p class="mb-0">1º D - Interfaces Web</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
