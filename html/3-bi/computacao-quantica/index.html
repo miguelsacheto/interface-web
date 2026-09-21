@@ -1,131 +1,425 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Computação Quântica</title>
-
+    <!-- CSS do Bootstrap, carregado via CDN (jsDelivr). Precisa vir ANTES do style.css,
+         senão suas regras customizadas (ex: .hero) podem ser sobrescritas pelo Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Meu CSS customizado (classes .hero, .card, .card:hover, .card-title etc.) -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg sticky-top hero">
+        <!-- Navbar do Bootstrap. "hero" é a classe customizada que define a cor de fundo (background-color).
+             navbar-expand-lg = a partir de telas grandes (lg), o menu fica expandido; em telas menores vira o menu "hambúrguer" -->
+        <nav class="navbar navbar-expand-lg  hero">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">Inicio</a>
+                <!-- Botão hambúrguer, só aparece em telas pequenas. data-bs-target="#navbarText" precisa
+                     bater com o id da div logo abaixo pra saber o que abrir/fechar -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                <!-- Conteúdo que colapsa (esconde) em telas pequenas -->
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <!-- Lista de links do menu. "active" no primeiro <a> destaca a página atual -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">inicio</a>
+                            <a class="nav-link" href="empresas.html">Empresas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">origem</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">para que serve</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobre.html">sobre</a>
+                            <a class="nav-link" href="sobre.html">Sobre</a>
                         </li>
                     </ul>
+                    <!-- Texto simples alinhado à direita da navbar (não é um link) -->
+                    <span class="navbar-text">
+                      Computação Quântica
+                    </span>
                 </div>
             </div>
-        </nav>
         </nav>
     </header>
-    <class id="#inicio"></class>
-    <div class="container px-4 text-center">
-        <div class="row gx-5">
-            <div class="card">
-                <div class="h-100">
-                    <div class="row">
-                        <div class="col-md-6">
-                        <div class="card-text ">Origem<br>
-
-                            <br>A computação quântica nasceu da união entre física quântica e ciência da computação, nas
-                            décadas
-                            de
-                            1980 e 1990.
-                            Físicos como Richard Feynman e David Deutsch perceberam que computadores comuns (clássicos)
-                            tinham
-                            dificuldade para
-                            simular sistemas quânticos, e propuseram que um computador baseado nas próprias leis da
-                            mecânica
-                            quântica poderia
-                            fazer isso de forma muito mais eficiente. A partir daí, cientistas começaram a desenvolver
-                            algoritmos e depois
-                            protótipos físicos de máquinas quânticas, um campo que só ganhou força real nos últimos 20
-                            anos, com
-                            empresas como
-                            IBM, Google e outras construindo processadores quânticos cada vez maiores.
-                        </div>
-
-
-
-
-                        <div class="container px-4 text-center">
-                            <div class="row gx-5">
-
-
-
-                                <div class="card-text ">o que é um qubit<br>
-
-                                    <br>O que é um qubit O qubit (bit quântico) é a unidade básica de informação da
-                                    computação
-                                    quântica, equivalente ao "bit" (0 ou 1) dos computadores tradicionais. A diferença é
-                                    que, enquanto um bit clássico só pode ser 0 ou 1 por vez, um qubit pode existir em
-                                    uma
-                                    combinação dos dois estados ao mesmo tempo, fenômeno chamado de superposição. Além
-                                    disso, qubits podem estar emaranhados entre si, o que significa que o estado de um
-                                    está
-                                    diretamente ligado ao estado do outro, mesmo que estejam fisicamente separados.
-                                    Essas
-                                    duas propriedades são o que dão à computação quântica seu poder de processamento
-                                    diferenciado.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+     <!-- Título principal da página, centralizado -->
+    <h1 class="text-center">computação quântica</h1>
+    <!-- Linha divisória horizontal, com margem grande em cima/embaixo (my-5) -->
+    <hr class="my-5">
+    <br>
+     <!-- Seção de introdução: título grande (display-5) em negrito, azul (text-primary), centralizado -->
+    <h1 class="display-5 fw-bold text-center text-primary mb-4">O que é Computação Quântica?</h1>
+     <!-- Parágrafo de introdução com classe "lead" (texto maior/destacado do Bootstrap).
+         max-width limita a largura da linha de texto pra facilitar a leitura -->
+    <p class="lead text-center mx-auto" style="max-width: 900px;">
+        Computação quântica é um paradigma de processamento de informação que usa fenômenos da mecânica quântica — como
+        superposição, emaranhamento e interferência — para realizar cálculos. Em vez do bit clássico (0 ou 1), a unidade
+        básica é o qubit, que pode existir em uma combinação de estados simultaneamente. Isso permite que, para certos
+        problemas específicos (não todos), um computador quântico explore um espaço de possibilidades muito maior do que
+        um computador clássico equivalente, resolvendo em minutos cálculos que levariam séculos em supercomputadores
+        tradicionais.
+        É importante frisar: computadores quânticos não substituem os computadores clássicos. Eles são coprocessadores
+        especializados, úteis para problemas específicos — otimização, simulação molecular, alguns tipos de busca e
+        fatoração — e operam de forma híbrida, junto a sistemas clássicos.
+    </p>
+    <br>
+    <!-- Imagem ilustrativa: um computador quântico real (IBM Quantum System One), pra dar contexto visual logo na intro -->
+    <figure class="text-center mb-0">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/IBM_Quantum_System_One.jpg"
+            alt="IBM Quantum System One, um computador quântico comercial" class="img-fluid rounded shadow-sm"
+            style="max-width: 500px;">
+        <figcaption class="text-muted small mt-2">IBM Quantum System One — um dos primeiros computadores quânticos
+            comerciais </figcaption>
+    </figure>
+    <br>
+    <br>
+    <!-- Grid com 2 colunas (row + col-md-6 + col-md-6 = 6+6 = 12, preenchendo a linha inteira em telas médias/grandes).
+         Em telas pequenas, as colunas empilham automaticamente (comportamento padrão mobile-first do Bootstrap) -->
+    <div class="row g-4 mt-4">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-primary mb-3"> Fundamentos físicos</h5>
+                    <p class="card-text text-start"><strong>qubit:</strong> unidade quântica de informação. Diferente do
+                        bit clássico,
+                        pode estar em superposição de |0⟩ e |1⟩ ao mesmo tempo, com uma probabilidade associada a cada
+                        estado até ser medido.<br>
+                        <strong>Superposição:</strong> propriedade que permite a um qubit representar múltiplos estados
+                        simultaneamente,
+                        ampliando exponencialmente o espaço de estados com o número de qubits. <br>
+                        <strong> Emaranhamento (entanglement):</strong> fenômeno em que dois ou mais qubits ficam
+                        correlacionados de tal
+                        forma que o estado de um afeta instantaneamente o estado do outro, mesmo à distância — a base da
+                        vantagem computacional quântica em muitos algoritmos. <br>
+                        <strong>Interferência quântica:</strong> usada nos algoritmos quânticos para amplificar as
+                        respostas corretas e
+                        cancelar as incorretas.<br>
+                        <strong>Decoerência:</strong> a "inimiga" da computação quântica — a perda do estado quântico
+                        por interação com o
+                        ambiente (calor, vibração, radiação), que introduz erros. É o principal motivo pelo qual os
+                        qubits precisam de isolamento extremo (muitas vezes temperaturas próximas do zero absoluto)..
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title text-primary mb-3"> Entendendo a superposição</h5>
+                    <!-- Esfera de Bloch: representação geométrica clássica de um estado de qubit -->
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bloch_Sphere_state_rho.svg"
+                        alt="Esfera de Bloch representando um estado de qubit" class="img-fluid d-block mx-auto mb-3"
+                        style="max-width: 180px;">
+                    <p class="card-text text-start">Um qubit, graças à superposição quântica, pode estar numa combinação
+                        dos dois estados ao mesmo tempo. Não significa que ele "vale 0 e 1 simultaneamente" de forma
+                        literal — é mais preciso dizer que ele existe numa mistura de probabilidades entre os dois, até
+                        o momento em que é medido. Na medição, ele "colapsa" para um valor definido (0 ou 1), com uma
+                        certa probabilidade de sair cada um.</p>
+                </div>
+            </div>
         </div>
-
-
-
-
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+    </div>
+    <br>
+    <br>
+    <!-- Tabela com as 6 abordagens de qubit físico, 3 colunas x 2 linhas (antes era 2 divs "row" com .col) -->
+    <figure class="text-center mb-4">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/D-Wave_Two_512_qubit_Vesuvius_chip.jpg"
+            alt="Chip quântico da D-Wave" class="img-fluid rounded shadow-sm" style="max-width: 420px;">
+        <figcaption class="text-muted small mt-2">Chip da D-Wave, especializado em recozimento quântico </figcaption>
+    </figure>
+    <div class="container">
+        <table class="table table-bordered align-middle text-center">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Supercondutores (IBM, Google, Rigetti)</strong>: circuitos elétricos resfriados a
+                        temperaturas próximas do zero absoluto (~15 mK). Maturidade tecnológica alta, mas exigem
+                        criogenia complexa.
+                    </td>
+                    <td>
+                        <strong>Íons aprisionados (IonQ, Quantinuum)</strong>: átomos ionizados presos por campos
+                        eletromagnéticos e manipulados a laser. Alta fidelidade, porém operações mais lentas.
+                    </td>
+                    <td>
+                        <strong>Fotônicos (PsiQuantum, Xanadu)</strong>: usam fótons de luz, operam à temperatura
+                        ambiente e são compatíveis com fábricas de semicondutores já existentes — potencial de
+                        escalabilidade elevado.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Átomos neutros (QuEra, Pasqal, Atom Computing)</strong>: átomos capturados por pinças
+                        ópticas (optical tweezers), permitindo arranjos flexíveis e escaláveis.
+                    </td>
+                    <td>
+                        <strong>Topológicos (Microsoft)</strong>: baseados em quasipartículas exóticas (modos zero de
+                        Majorana); promete qubits intrinsecamente mais estáveis, mas é a abordagem mais especulativa e
+                        ainda em fase de validação.
+                    </td>
+                    <td>
+                        <strong>Recozimento quântico / annealing (D-Wave)</strong>: especializados em problemas de
+                        otimização, não são computadores quânticos universais, mas já têm o maior número de
+                        implantações comerciais reais.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <figure class="text-center mb-4">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Max_Planck_1933.jpg" alt="Max Planck, físico"
+            class="img-fluid rounded shadow-sm" style="max-width: 220px;">
+        <figcaption class="text-muted small mt-2">Max Planck, considerado o pai da teoria quântica — o ponto de
+            partida da linha do tempo abaixo</figcaption>
+    </figure>
+    <div class="accordion w-75 mx-auto" id="timelineAccordion">
+        <!-- Item 1: começa aberto por causa da classe "show" na div accordion-collapse.
+             O id="item1" do corpo precisa ser IGUAL ao data-bs-target="#item1" do botão — é essa ligação
+             que faz o clique no botão abrir/fechar o corpo correto -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+                    1900-1920s
+                </button>
+            </h2>
+            <div id="item1" class="accordion-collapse collapse show" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Max Planck e Albert Einstein lançam as bases da física quântica (quantização de energia, efeito
+                    fotoelétrico); Schrödinger e Heisenberg formalizam a mecânica quântica.
+                </div>
+            </div>
+        </div>
+         <!-- Item 2: mesmo padrão do item 1, mas com "collapsed" no botão (começa fechado, sem "show" no corpo) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item2">
+                    1980-1981
+                </button>
+            </h2>
+            <div id="item2" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Paul Benioff propõe um modelo mecânico-quântico da máquina de Turing, demonstrando que a computação
+                    quântica é teoricamente possível. Richard Feynman, em palestra célebre de 1981/1982, argumenta que
+                    só um computador quântico pode simular eficientemente sistemas quânticos.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item3">
+                    1985
+                </button>
+            </h2>
+            <div id="item3" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    David Deutsch formaliza o conceito de "computador quântico universal", com base na máquina de Turing
+                    quântica.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item4">
+                    1994
+                </button>
+            </h2>
+            <div id="item4" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Peter Shor desenvolve o algoritmo de Shor, capaz de fatorar números grandes exponencialmente mais
+                    rápido que algoritmos clássicos — um marco que alertou o mundo para o potencial (e a ameaça à
+                    criptografia) da computação quântica.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item5">
+                    1996
+                </button>
+            </h2>
+            <div id="item5" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Lov Grover cria o algoritmo de Grover, para busca em bancos de dados não estruturados com ganho
+                    quadrático de velocidade.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item6">
+                    1998
+                </button>
+            </h2>
+            <div id="item6" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Primeiras demonstrações experimentais de computação quântica com poucos qubits (RMN — ressonância
+                    magnética nuclear).
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item7">
+                    2001
+                </button>
+            </h2>
+            <div id="item7" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    IBM e Stanford fatoram o número 15 (em 3 × 5) usando um computador quântico de RMN com 7 qubits —
+                    primeira prova prática do algoritmo de Shor.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item8">
+                    2007
+                </button>
+            </h2>
+            <div id="item8" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    D-Wave Systems anuncia o "Orion", primeiro protótipo comercial de computador quântico de recozimento
+                    (annealing), gerando controvérsia sobre se seria "realmente quântico".
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item9">
+                    2011
+                </button>
+            </h2>
+            <div id="item9" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    D-Wave lança o D-Wave One, vendido à Lockheed Martin — primeiro computador quântico comercializado.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item10">
+                    2016
+                </button>
+            </h2>
+            <div id="item10" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    IBM disponibiliza o IBM Quantum Experience, permitindo acesso público via nuvem a processadores
+                    quânticos reais.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item11">
+                    2019
+                </button>
+            </h2>
+            <div id="item11" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Google anuncia ter atingido a "supremacia quântica" com o processador Sycamore (53 qubits), alegando
+                    ter resolvido em 200 segundos um cálculo que levaria milhares de anos num supercomputador clássico —
+                    feito contestado pela IBM.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item12">
+                    2020-2021
+                </button>
+            </h2>
+            <div id="item12" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    China (equipe da USTC) demonstra vantagem quântica com o processador fotônico Jiuzhang. Honeywell e
+                    Cambridge Quantum se fundem, formando a Quantinuum.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item13">
+                    2022-2023
+                </button>
+            </h2>
+            <div id="item13" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    IBM lança o processador Osprey (433 qubits) e depois o Condor (1.121 qubits), superando a barreira
+                    de mil qubits físicos.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item14">
+                    2024
+                </button>
+            </h2>
+            <div id="item14" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Google apresenta o chip Willow, com avanços relevantes em correção de erros, mostrando que a taxa de
+                    erro lógico cai à medida que se aumenta a escala da malha de código de superfície — um resultado
+                    teórico buscado há décadas.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item15">
+                    2025
+                </button>
+            </h2>
+            <div id="item15" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    Microsoft anuncia o chip Majorana 1, baseado em qubits topológicos (estados de Majorana), prometendo
+                    maior resistência a erros. IonQ adquire a Oxford Ionics; Quantinuum atinge 48 qubits lógicos
+                    verificados no processador Helios.
+                </div>
+            </div>
+        </div>
+        <!-- Item 16: último item da lista -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#item16">
+                    2026
+                </button>
+            </h2>
+            <div id="item16" class="accordion-collapse collapse" data-bs-parent="#timelineAccordion">
+                <div class="accordion-body">
+                    IBM lança os chips Nighthawk e Loon, com foco em tolerância a falhas; Google demonstra o algoritmo
+                    "Quantum Echoes", com vantagem quântica verificável 13.000× mais rápida que supercomputadores
+                    clássicos em uma tarefa específica. Investimento global no setor ultrapassa US$ 17 bilhões.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Footer do Bootstrap: reaproveita a classe "hero" pra manter a mesma cor de fundo da navbar -->
+    <footer class="hero text-center text-white py-4">
+        <div class="container">
+            <p class="mb-1">Miguel Silva Sacheto e Noah Calixto Moi</p>
+            <p class="mb-0">1º D - Interfaces Web</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
-    Origem
-
-A computação quântica nasceu da união entre física quântica e ciência da computação, nas décadas de 1980 e 1990. Físicos como Richard Feynman e David Deutsch perceberam que computadores comuns (clássicos) tinham dificuldade para simular sistemas quânticos, e propuseram que um computador baseado nas próprias leis da mecânica quântica poderia fazer isso de forma muito mais eficiente. A partir daí, cientistas começaram a desenvolver algoritmos e depois protótipos físicos de máquinas quânticas, um campo que só ganhou força real nos últimos 20 anos, com empresas como IBM, Google e outras construindo processadores quânticos cada vez maiores.
-
-O que é um qubit
-
-O qubit (bit quântico) é a unidade básica de informação da computação quântica, equivalente ao "bit" (0 ou 1) dos computadores tradicionais. A diferença é que, enquanto um bit clássico só pode ser 0 ou 1 por vez, um qubit pode existir em uma combinação dos dois estados ao mesmo tempo, fenômeno chamado de superposição. Além disso, qubits podem estar emaranhados entre si, o que significa que o estado de um está diretamente ligado ao estado do outro, mesmo que estejam fisicamente separados. Essas duas propriedades são o que dão à computação quântica seu poder de processamento diferenciado.
-
-O que faz
-
-Um computador quântico manipula qubits usando operações chamadas "portas quânticas", de forma parecida com as portas lógicas dos computadores comuns, mas explorando superposição e emaranhamento. Isso permite que, em certos problemas, o computador quântico explore muitas possibilidades de solução simultaneamente, em vez de testá-las uma por uma como uma máquina clássica faria. Não é uma máquina "mais rápida" para tudo — na verdade, é mais lenta ou igual para a maioria das tarefas do dia a dia — mas é extremamente eficiente para tipos específicos de problemas.
-
-Para que serve
-
-A computação quântica tem potencial em áreas como:
-
-Criptografia: quebrar ou criar sistemas de segurança muito mais robustos.
-Descoberta de fármacos e materiais: simular moléculas e reações químicas com precisão que computadores clássicos não conseguem.
-Otimização: resolver problemas complexos de logística, finanças e planejamento com muitas variáveis.
-Inteligência artificial: acelerar certos tipos de treinamento e processamento de dados.
-Pesquisa científica: simular sistemas físicos e químicos complexos, como o comportamento de partículas subatômicas.
-
-Vale destacar que a computação quântica ainda está em estágio inicial de desenvolvimento — os computadores atuais são propensos a erros e precisam de condições extremas (como temperaturas próximas do zero absoluto) para funcionar. Ela não vai substituir os computadores comuns, mas sim complementá-los em tarefas muito específicas.
+</html>
