@@ -1,0 +1,124 @@
+:root{
+  --teal:#087a90; --teal-dark:#05586a; --navy:#0b2a5b; --orange:#f97316;
+  --maroon:#4a1a2b; --paper:#f3f9fa; --ink:#14232b;
+  --font:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:#fff;line-height:1.6;margin:0;padding-bottom:76px}
+h1,h2,h3{font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--navy);margin:0 0 .6rem}
+h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+p{max-width:62ch}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+section{padding:4rem 0}
+
+/* botão de ligar */
+.call{display:inline-flex;align-items:center;gap:.6rem;background:var(--orange);color:var(--navy);
+      font-weight:800;text-decoration:none;border-radius:999px;padding:.85rem 1.6rem;font-size:1.05rem;
+      border:2px solid var(--orange)}
+.call:hover{background:#fff;color:var(--navy)}
+.call.small{padding:.5rem 1.1rem;font-size:.95rem}
+
+/* topo */
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #dbe8ec}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--navy);font-weight:800;font-size:1.15rem}
+.brand img{width:46px;height:46px;object-fit:contain}
+nav{display:flex;gap:1.4rem}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--teal)}
+@media(max-width:760px){nav{display:none}}
+
+/* hero */
+.hero{background:var(--teal);color:#fff;padding:4.5rem 0 6rem;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5.5vw,3.6rem)}
+.hero p{font-size:1.15rem;margin:0 0 1.4rem}
+.phone{display:block;font-size:clamp(2.2rem,7vw,4.2rem);font-weight:900;letter-spacing:-.03em;color:#fff;
+       text-decoration:none;line-height:1;margin:1.2rem 0 1.4rem;border-bottom:6px solid var(--orange);width:fit-content}
+.phone:hover{color:#ffe3cc}
+.hero .logo{background:#fff;border-radius:0;aspect-ratio:1;display:grid;place-items:center;padding:6%;
+            box-shadow:0 0 0 10px rgba(255,255,255,.18)}
+.hero .logo img{width:100%;height:100%;object-fit:contain}
+.wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:60px;display:block}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.hero .logo{max-width:220px;order:-1}}
+
+/* garantias */
+.garantias{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:.9rem}
+.checks li{display:flex;gap:.8rem;align-items:flex-start;font-size:1.1rem}
+.checks li::before{content:"";flex:none;width:1.4rem;height:1.4rem;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+                    background:var(--teal);margin-top:.2rem}
+.prova{background:var(--paper);border-left:6px solid var(--orange);padding:1.6rem;border-radius:0 14px 14px 0}
+.prova strong{display:block;font-size:2.4rem;color:var(--navy);line-height:1}
+@media(max-width:760px){.garantias{grid-template-columns:1fr}}
+
+/* diferenciais */
+.dif{background:var(--paper)}
+.dif-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:1.6rem}
+.dif-grid div{background:#fff;border-top:5px solid var(--teal);padding:1.3rem;border-radius:0 0 12px 12px}
+.dif-grid div:nth-child(2){border-color:var(--orange)}
+.dif-grid div:nth-child(3){border-color:var(--navy)}
+.dif-grid div:nth-child(4){border-color:var(--maroon)}
+.dif-grid h3{font-size:1.2rem}
+.dif-grid p{margin:0;font-size:.98rem}
+
+/* preço */
+.preco{background:var(--maroon);color:#fff;text-align:center;padding:3rem 0}
+.preco p{margin:0 auto;font-size:1.2rem}
+.preco strong{display:block;font-size:clamp(2.4rem,7vw,4rem);line-height:1.1;margin:.3rem 0 0;color:#fff}
+
+/* serviços */
+.serv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 2.5rem;margin-top:1.4rem}
+.serv-grid div{padding:1.1rem 0;border-bottom:2px solid #dbe8ec}
+.serv-grid h3{font-size:1.15rem;margin-bottom:.2rem}
+.serv-grid p{margin:0;font-size:.97rem}
+.emerg{background:var(--navy);color:#fff;border-radius:14px;padding:1.2rem 1.4rem;margin-top:1.8rem;display:flex;
+       flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.emerg p{margin:0;font-size:1.1rem}
+
+/* passos */
+.passos{background:var(--paper)}
+.steps{list-style:none;counter-reset:s;padding:0;margin:1.6rem 0 0;display:grid;gap:1.2rem;
+       grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.steps li{counter-increment:s;background:#fff;border-radius:14px;padding:1.4rem}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;
+                  background:var(--teal);color:#fff;font-weight:800;margin-bottom:.8rem}
+.steps h3{font-size:1.2rem}
+.steps p{margin:0}
+
+/* público */
+.publico-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:1.4rem}
+.publico-grid div{border:2px solid #dbe8ec;border-radius:12px;padding:1.2rem}
+.publico-grid h3{font-size:1.1rem}
+.publico-grid p{margin:0;font-size:.97rem}
+
+/* depoimentos */
+.dep{background:var(--teal);color:#fff}
+.dep h2{color:#fff}
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;margin-top:1.4rem}
+.dep blockquote{margin:0;background:rgba(255,255,255,.12);border-radius:14px;padding:1.4rem}
+.dep blockquote p{margin:0 0 .8rem;font-size:1.05rem}
+.dep cite{font-style:normal;font-weight:700}
+.stars{color:#ffd37a;letter-spacing:.15em;display:block;margin-bottom:.4rem}
+
+/* faq */
+details{border-bottom:2px solid #dbe8ec;padding:1rem 0}
+summary{font-weight:700;font-size:1.1rem;cursor:pointer;color:var(--navy)}
+details p{margin:.7rem 0 0}
+
+/* contato */
+.contato{background:var(--navy);color:#fff;text-align:center}
+.contato h2{color:#fff}
+.contato p{margin-inline:auto}
+.contato .phone{margin-inline:auto}
+.contato .mail{color:#fff;font-weight:700}
+
+footer{background:#071a39;color:#b9c7dd;text-align:center;padding:1.4rem 0;font-size:.9rem}
+footer p{margin:.2rem auto}
+
+/* barra de ligação fixa no celular */
+.fixed-call{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--orange);color:var(--navy);
+            text-align:center;font-weight:900;font-size:1.2rem;padding:1rem;text-decoration:none;
+            box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+@media(min-width:761px){.fixed-call{display:none}body{padding-bottom:0}}
