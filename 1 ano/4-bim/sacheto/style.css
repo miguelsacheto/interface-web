@@ -1,0 +1,351 @@
+/* ==========================================================
+   Fluxo-Certo - estilos próprios (por cima do Bootstrap 5)
+   ========================================================== */
+
+/* Cores da marca (variáveis) */
+:root {
+  --petroleo: #087a90;
+  --marinho: #0b2a5b;
+  --laranja: #f97316;
+  --vinho: #4a1a2b;
+  --claro: #f3f9fa;
+  --tinta: #14232b;
+  --linha: #dbe8ec;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* para o menu fixo não cobrir o título ao clicar num link */
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--tinta);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--marinho);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 0.6rem; }
+h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+
+/* Linhas de texto não ficam compridas demais */
+.secao p,
+.preco p {
+  max-width: 62ch;
+}
+
+/* Em seções centralizadas, o parágrafo fica no meio */
+.text-center p {
+  margin-inline: auto;
+}
+
+/* Contorno laranja ao navegar pelo teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--laranja);
+  outline-offset: 3px;
+}
+
+/* Espaçamento padrão das seções */
+.secao {
+  padding: 4rem 0;
+}
+
+/* Espaço no fim da página para a barra de ligar não cobrir o rodapé (só no celular) */
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: 70px;
+  }
+}
+
+/* ---------- Fundos coloridos ---------- */
+.fundo-petroleo { background-color: var(--petroleo); }
+.fundo-marinho  { background-color: var(--marinho); }
+.fundo-vinho    { background-color: var(--vinho); }
+.fundo-claro    { background-color: var(--claro); }
+
+/* Texto branco nas seções escuras */
+.fundo-petroleo,
+.fundo-petroleo h1,
+.fundo-petroleo h2,
+.fundo-marinho,
+.fundo-marinho h2,
+.fundo-vinho {
+  color: #ffffff;
+}
+
+/* ---------- Botão de ligar (laranja) ---------- */
+/* No Bootstrap 5.3 o botão usa variáveis --bs-btn-*; mudamos elas aqui */
+.btn-ligar {
+  --bs-btn-color: var(--marinho);
+  --bs-btn-bg: var(--laranja);
+  --bs-btn-border-color: var(--laranja);
+  --bs-btn-hover-color: var(--marinho);
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-border-color: var(--laranja);
+  --bs-btn-active-color: var(--marinho);
+  --bs-btn-active-bg: #ffffff;
+  --bs-btn-active-border-color: var(--laranja);
+  --bs-btn-border-width: 2px;
+  font-weight: 800;
+}
+
+/* ---------- Menu ---------- */
+.navbar-brand {
+  color: var(--marinho);
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.navbar-brand img {
+  object-fit: contain;
+  margin-right: 0.4rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--petroleo);
+}
+
+/* ---------- Seção principal ---------- */
+.hero {
+  padding: 4.5rem 0 6rem; /* o espaço de baixo é para a onda */
+}
+
+.hero p {
+  margin-bottom: 1.4rem;
+}
+
+/* Telefone grande em destaque */
+.telefone {
+  display: block;
+  width: fit-content;
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 1.2rem 0 1.4rem;
+  border-bottom: 6px solid var(--laranja);
+}
+
+.telefone:hover {
+  color: #ffe3cc;
+}
+
+/* Caixa branca da logo */
+.caixa-logo {
+  background-color: #ffffff;
+  padding: 6%;
+  max-width: 320px;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.18);
+}
+
+/* Onda no fim da seção principal */
+.onda {
+  height: 60px;
+  margin-bottom: -1px;
+}
+
+/* ---------- Garantias ---------- */
+.checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.1rem;
+}
+
+/* Gotinha antes de cada item */
+.checks li::before {
+  content: "";
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.2rem;
+  background-color: var(--petroleo);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.prova {
+  background-color: var(--claro);
+  border-left: 6px solid var(--laranja);
+  border-radius: 0 14px 14px 0;
+  padding: 1.6rem;
+}
+
+.prova strong {
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--marinho);
+}
+
+/* ---------- Diferenciais (cards com faixa colorida em cima) ---------- */
+.dif-card {
+  border: 0;
+  border-top: 5px solid var(--petroleo);
+  border-radius: 0 0 12px 12px;
+}
+
+.borda-petroleo { border-top-color: var(--petroleo); }
+.borda-laranja  { border-top-color: var(--laranja); }
+.borda-marinho  { border-top-color: var(--marinho); }
+.borda-vinho    { border-top-color: var(--vinho); }
+
+.dif-card p {
+  font-size: 0.98rem;
+}
+
+/* ---------- Preço ---------- */
+.preco {
+  padding: 3rem 0;
+}
+
+.preco p {
+  font-size: 1.2rem;
+}
+
+.preco-valor {
+  display: block;
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 0.3rem;
+}
+
+/* ---------- Serviços ---------- */
+.servico {
+  padding: 1.1rem 0;
+  border-bottom: 2px solid var(--linha);
+}
+
+.servico h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.servico p {
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+/* Faixa de emergência */
+.emergencia {
+  background-color: var(--marinho);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- Como funciona ---------- */
+.passo {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 1.4rem;
+  height: 100%;
+}
+
+.numero {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--petroleo);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* ---------- Quem atendemos ---------- */
+.publico {
+  height: 100%;
+  border: 2px solid var(--linha);
+  border-radius: 12px;
+  padding: 1.2rem;
+}
+
+.publico h3 {
+  font-size: 1.1rem;
+}
+
+/* ---------- Depoimentos ---------- */
+.depoimento {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 1.4rem;
+}
+
+.depoimento p {
+  font-size: 1.05rem;
+}
+
+.depoimento cite {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.estrelas {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #ffd37a;
+  letter-spacing: 0.15em;
+}
+
+/* ---------- Dúvidas (accordion do Bootstrap) ---------- */
+.accordion {
+  --bs-accordion-active-bg: var(--claro);
+  --bs-accordion-active-color: var(--marinho);
+  --bs-accordion-border-color: var(--linha);
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-button {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--marinho);
+}
+
+/* ---------- Contato ---------- */
+.email {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  background-color: #071a39;
+  color: #b9c7dd;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---------- Barra de ligar fixa no celular ---------- */
+.barra-ligar {
+  background-color: var(--laranja);
+  color: var(--marinho);
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.barra-ligar:hover {
+  color: var(--marinho);
+}
